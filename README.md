@@ -18,11 +18,3 @@ Test
 After installation, test hash.
 
     $ python test.py
-
-Credits
--------
-
-* Module written by @chaeplin https://github.com/chaeplin/xcoin-hash
-* Module maintained by @eduffield https://github.com/hatchproject/xcoin-hash
-* Module maintained by @flare https://github.com/nightlyhatch/xcoin-hash
-* Module maintained by @vertoe https://github.com/vertoe/hatch_hash
