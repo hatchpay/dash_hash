@@ -1,11 +1,11 @@
-#ifndef DASH_H
-#define DASH_H
+#ifndef HATCH_H
+#define HATCH_H
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-void dash_hash(const char* input, int len, char* output);
+void hatch_hash(const char* input, int len, char* output);
 
 #ifdef __cplusplus
 }

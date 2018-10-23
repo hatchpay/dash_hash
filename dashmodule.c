@@ -1,8 +1,8 @@
 #include <Python.h>
 
-#include "dash.h"
+#include "hatch.h"
 
-static PyObject *dash_getpowhash(PyObject *self, PyObject *args)
+static PyObject *hatch_getpowhash(PyObject *self, PyObject *args)
 {
     char *output;
     PyObject *value;
@@ -17,9 +17,9 @@ static PyObject *dash_getpowhash(PyObject *self, PyObject *args)
     output = PyMem_Malloc(32);
 
 #if PY_MAJOR_VERSION >= 3
-    dash_hash((char *)PyBytes_AsString((PyObject*) input), (int)PyBytes_Size((PyObject*) input), output);
+    hatch_hash((char *)PyBytes_AsString((PyObject*) input), (int)PyBytes_Size((PyObject*) input), output);
 #else
-    dash_hash((char *)PyString_AsString((PyObject*) input), (int)PyString_Size((PyObject*) input), output);
+    hatch_hash((char *)PyString_AsString((PyObject*) input), (int)PyString_Size((PyObject*) input), output);
 #endif
     Py_DECREF(input);
 #if PY_MAJOR_VERSION >= 3
@@ -31,27 +31,27 @@ static PyObject *dash_getpowhash(PyObject *self, PyObject *args)
     return value;
 }
 
-static PyMethodDef DashMethods[] = {
-    { "getPoWHash", dash_getpowhash, METH_VARARGS, "Returns the proof of work hash using dash hash" },
+static PyMethodDef HatchMethods[] = {
+    { "getPoWHash", hatch_getpowhash, METH_VARARGS, "Returns the proof of work hash using hatch hash" },
     { NULL, NULL, 0, NULL }
 };
 
 #if PY_MAJOR_VERSION >= 3
-static struct PyModuleDef DashModule = {
+static struct PyModuleDef HatchModule = {
     PyModuleDef_HEAD_INIT,
-    "dash_hash",
+    "hatch_hash",
     "...",
     -1,
-    DashMethods
+    HatchMethods
 };
 
-PyMODINIT_FUNC PyInit_dash_hash(void) {
-    return PyModule_Create(&DashModule);
+PyMODINIT_FUNC PyInit_hatch_hash(void) {
+    return PyModule_Create(&HatchModule);
 }
 
 #else
 
-PyMODINIT_FUNC initdash_hash(void) {
-    (void) Py_InitModule("dash_hash", DashMethods);
+PyMODINIT_FUNC inithatch_hash(void) {
+    (void) Py_InitModule("hatch_hash", HatchMethods);
 }
 #endif

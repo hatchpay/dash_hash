@@ -1,7 +1,7 @@
-dash_hash (python) v1.3.1
+hatch_hash (python) v1.3.1
 ===========================
 
-Python module for Dash's X11 hashing.
+Python module for Hatch's X11 hashing.
 
 
 Install
@@ -23,6 +23,6 @@ Credits
 -------
 
 * Module written by @chaeplin https://github.com/chaeplin/xcoin-hash
-* Module maintained by @eduffield https://github.com/darkcoinproject/xcoin-hash
-* Module maintained by @flare https://github.com/nightlydarkcoin/xcoin-hash
-* Module maintained by @vertoe https://github.com/vertoe/darkcoin_hash
+* Module maintained by @eduffield https://github.com/hatchproject/xcoin-hash
+* Module maintained by @flare https://github.com/nightlyhatch/xcoin-hash
+* Module maintained by @vertoe https://github.com/vertoe/hatch_hash
