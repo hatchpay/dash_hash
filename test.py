@@ -4,35 +4,38 @@ from binascii import unhexlify, hexlify
 import unittest
 
 # hatch block #1
-# moo@b1:~/.hatch$ hatchd getblockhash 1
-# 000007d91d1254d60e2dd1ae580383070a4ddffa4c64c2eeb4a2f9ecc0414343
-# moo@b1:~/.hatch$ hatchd getblock 000007d91d1254d60e2dd1ae580383070a4ddffa4c64c2eeb4a2f9ecc0414343
+# getblockhash 1
+# 000008920bf22af181d6fbb50ab127408e8546964902467de1c21e8c011baa8e
+# getblock 000008920bf22af181d6fbb50ab127408e8546964902467de1c21e8c011baa8e
 # {
-#     "hash" : "000007d91d1254d60e2dd1ae580383070a4ddffa4c64c2eeb4a2f9ecc0414343",
-#     "confirmations" : 169888,
-#     "size" : 186,
-#     "height" : 1,
-#     "version" : 2,
-#     "merkleroot" : "ef3ee42b51e2a19c4820ef182844a36db1201c61eb0dec5b42f84be4ad1a1ca7",
-#     "tx" : [
-#         "ef3ee42b51e2a19c4820ef182844a36db1201c61eb0dec5b42f84be4ad1a1ca7"
-#     ],
-#     "time" : 1390103681,
-#     "nonce" : 128987,
-#     "bits" : "1e0ffff0",
-#     "difficulty" : 0.00024414,
-#     "previousblockhash" : "00000ffd590b1485b3caadc19b22e6379c733355108f107a430458cdf3407ab6",
-#     "nextblockhash" : "00000bafcc571ece7c5c436f887547ef41b574e10ef7cc6937873a74ef1efeae"
+#   "hash": "000008920bf22af181d6fbb50ab127408e8546964902467de1c21e8c011baa8e",
+#   "confirmations": 71,
+#   "size": 179,
+#   "height": 1,
+#   "version": 536870912,
+#   "versionHex": "20000000",
+#   "merkleroot": "42a3d6664f57b7fd1a62c412af52b058a00ed06cf99fa05d383672cb8d1e7835",
+#   "tx": [
+#     "42a3d6664f57b7fd1a62c412af52b058a00ed06cf99fa05d383672cb8d1e7835"
+#   ],
+#   "time": 1540647179,
+#   "mediantime": 1540647179,
+#   "nonce": 30038,
+#   "bits": "1e0ffff0",
+#   "difficulty": 0.000244140625,
+#   "chainwork": "0000000000000000000000000000000000000000000000000000000000200020",
+#   "previousblockhash": "000000fa6116f5d6c6ce9b60bd431469e40b4fe55feeeda59e33cd2f0b863196",
+#   "nextblockhash": "000002844062a2b27da1a403b1683639b7dafdc953dd512525a1ece1010f8669"
 # }
 
-header_hex = ("02000000" +
-    "b67a40f3cd5804437a108f105533739c37e6229bc1adcab385140b59fd0f0000" +
-    "a71c1aade44bf8425bec0deb611c20b16da3442818ef20489ca1e2512be43eef"
-    "814cdb52" +
+header_hex = ("00000020" +
+    "9631860b2fcd339ea5edee5fe54f0be4691443bd609bcec6d6f51661fa000000" +
+    "35781e8dcb7236385da09ff96cd00ea058b052af12c4621afdb7574f66d6a342"
+    "0b69d45b" +
     "f0ff0f1e" +
-    "dbf70100")
+    "56750000")
 
-best_hash = '434341c0ecf9a2b4eec2644cfadf4d0a07830358aed12d0ed654121dd9070000'
+best_hash = '8eaa1b018c1ec2e17d4602499646858e4027b10ab5fbd681f12af20b92080000'
 
 class TestSequenceFunctions(unittest.TestCase):
 
